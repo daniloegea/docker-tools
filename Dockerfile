@@ -3,9 +3,9 @@ FROM debian:unstable-slim
 RUN apt-get update \
     && apt-get dist-upgrade -y \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y \
-    traceroute curl wget dnsutils jq nmap ncat net-tools tcpdump mtr iperf3 \
+    traceroute curl wget dnsutils jq nmap ncat net-tools tcpdump mtr-tiny iperf3 \
     git iproute2 siege apache2-utils openssl openssh-client nvi less tshark iptables \
-    procps strace inetutils-ping inetutils-telnet inetutils-ftp kmod \
+    procps strace inetutils-ping inetutils-telnet inetutils-ftp kmod iptraf-ng\
     && rm -rf /var/lib/apt/lists/*
 
 COPY Dockerfile /Dockerfile
